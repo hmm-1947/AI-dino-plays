@@ -1,0 +1,65 @@
+import pygame
+import os
+
+WIDTH, HEIGHT = 900, 450
+FPS = 60
+GROUND_Y = HEIGHT - 70
+
+GRAVITY = 0.7
+JUMP_STRENGTH = -16
+DUCK_Y_OFFSET = 25
+INITIAL_GAME_SPEED = 6
+GAME_SPEED_INCREMENT = 0.25
+MAX_GAME_SPEED = 22
+INITIAL_SPAWN_TIME = 90
+SPAWN_TIME_DECREMENT = 1.2
+MIN_SPAWN_TIME = 30
+MIN_OBSTACLE_SPAWN_DIST = 250
+PTERODACTYL_CHANCE = 0.3
+
+POPULATION_SIZE = 30
+INPUT_SIZE = 6
+HIDDEN_SIZE = 8
+OUTPUT_SIZE = 1
+JUMP_THRESHOLD = 0.75
+DUCK_THRESHOLD = 0.25
+TOURNAMENT_SIZE = 5
+ELITISM_PERCENT = 0.10
+MUTATION_RATE = 0.1
+MUTATION_AMOUNT = 0.2
+BRAIN_FILENAME = "best_dino_brain_enhanced.pkl"
+PLOT_FILENAME = "scores_plot_enhanced.png"
+
+WHITE = (255, 255, 255)
+BLACK = (0, 0, 0)
+RED = (255, 0, 0)
+GREEN = (0, 200, 0)
+GREY = (100, 100, 100)
+SKY_BLUE = (135, 206, 250)
+
+ASSET_FOLDER = "assets"
+DINO_IMG_PATH = os.path.join(ASSET_FOLDER, "dino.png")
+DINO_DUCK_IMG_PATH = os.path.join(ASSET_FOLDER, "dino_duck.png")
+BASE_CACTUS_IMG_PATH = os.path.join(ASSET_FOLDER, "cactus.png")
+PTERODACTYL_IMG_PATH = os.path.join(ASSET_FOLDER, "pterodactyl.png")
+JUMP_SOUND_PATH = os.path.join(ASSET_FOLDER, "jump.wav")
+DIE_SOUND_PATH = os.path.join(ASSET_FOLDER, "die.wav")
+POINT_SOUND_PATH = os.path.join(ASSET_FOLDER, "point.wav")
+
+CACTUS_TYPES = [
+    {'scale': (25, 50), 'count': 1},
+    {'scale': (40, 70), 'count': 1},
+    {'scale': (50, 50), 'count': 2},
+    {'scale': (75, 50), 'count': 3},
+]
+
+KEY_PAUSE = pygame.K_p
+KEY_SPEED_UP = pygame.K_PLUS
+KEY_SLOW_DOWN = pygame.K_MINUS
+KEY_MANUAL_JUMP = pygame.K_SPACE
+KEY_MANUAL_DUCK = pygame.K_DOWN
+
+INITIAL_SIM_SPEED = 1.0
+MIN_SIM_SPEED = 0.25
+MAX_SIM_SPEED = 4.0
+SIM_SPEED_MULTIPLIER = 1.25
