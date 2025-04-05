@@ -1,6 +1,6 @@
 # AI Dino
 
-This is a fun where a computer AI learns to play the "jumping dinosaur" game.
+This is a fun visualization where a computer AI learns to play the "jumping dinosaur" game.
 
 ![Dino Screenshot](ss.png)  
 
@@ -54,4 +54,3 @@ This is a fun where a computer AI learns to play the "jumping dinosaur" game.
 *   Saves the "brain" of the best dinosaur so it can start smart next time.
 *   Shows a graph of how the score improved.
 
-Have fun watching the AI learn!
