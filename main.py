@@ -13,10 +13,11 @@ from utils import save_best_brain, load_best_brain, plot_scores, play_sound, sou
 pygame.init()
 
 screen = pygame.display.set_mode((cfg.WIDTH, cfg.HEIGHT))
-pygame.display.set_caption("Enhanced AI Chrome Dino (Organized)")
+pygame.display.set_caption("AI Dino Plays")
 clock = pygame.time.Clock()
-FONT_SMALL = pygame.font.SysFont(None, 24)
-FONT_MEDIUM = pygame.font.SysFont(None, 30)
+
+FONT_SMALL = pygame.font.SysFont("roboto", 24)
+FONT_MEDIUM = pygame.font.SysFont("roboto", 30)
 
 simulation_speed_factor = cfg.INITIAL_SIM_SPEED
 
@@ -86,7 +87,7 @@ def main():
                         break
             if dino.alive: all_dead = False
 
-        screen.fill(cfg.SKY_BLUE)
+        screen.fill(cfg.WHITE)
         pygame.draw.line(screen, cfg.BLACK, (0, cfg.GROUND_Y), (cfg.WIDTH, cfg.GROUND_Y), 2)
         for obs in obstacles: obs.draw(screen)
         for dino in dinos: dino.draw(screen)

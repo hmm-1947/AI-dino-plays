@@ -90,7 +90,7 @@ class Dino:
         self.run_img = None
         self.duck_img = None
         self.image_loaded = False
-        self.dino_width_ref = 44
+        self.dino_width_ref = 70
         self.dino_height_ref = 47
         self.duck_height_ref = 27
         try:

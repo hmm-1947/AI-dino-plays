@@ -1,5 +1,5 @@
 import random
-import numpy as np
+import numpy as np 
 import config as cfg
 from entities import Dino
 from neural_network import NeuralNetwork
